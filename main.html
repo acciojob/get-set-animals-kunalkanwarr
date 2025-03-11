@@ -1,47 +1,16 @@
 <!DOCTYPE html>
-
-<html>
-
+<html lang="en">
 <head>
-	<link rel="stylesheet" href="styles.css">
-	 <title>Animal Sounds</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            margin: 50px;
-        }
-        button {
-            margin: 10px;
-            padding: 10px;
-            font-size: 16px;
-            cursor: pointer;
-        }
-    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animal Sounds</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <h1>Animal Sounds</h1>
-    <button id="catSound">Make Cat Sound</button>
-    <button id="dogSound">Make Dog Sound</button>
-    
-    <script>
-        document.getElementById("catSound").addEventListener("click", () => {
-            const cat = new Cat("Siamese");
-            cat.makeSound();
-            cat.purr();
-        });
-        
-        document.getElementById("dogSound").addEventListener("click", () => {
-            const dog = new Dog("Golden Retriever");
-            dog.makeSound();
-            dog.bark();
-        });
-    </script> -->
-
-	<!-- the entire body must be written by student
-    <!-- <script type="text/javascript" src="./script.js"> -->
-</script>
-
+    <button id="createCat">Create Cat</button>
+    <button id="createDog">Create Dog</button>
+    <p id="output"></p>
+    <script src="script.js"></script>
 </body>
-
 </html>
