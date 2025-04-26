@@ -20,35 +20,43 @@
     <button onclick="dog.bark()">Bark</button>
   </div>
 
-  <script>
-    class Animal {
-      constructor(species) {
-        this._species = species;
-      }
-
-      get species() {
-        return this._species;
-      }
-
-      makeSound() {
-        console.log(`The ${this._species} makes a sound`);
-      }
+   <script>
+  class Animal {
+    constructor(species) {
+      this._species = species;
     }
 
-    class Cat extends Animal {
-      purr() {
-        console.log("purr");
-      }
+    get species() {
+      return this._species;
     }
 
-    class Dog extends Animal {
-      bark() {
-        console.log("woof");
-      }
+    makeSound() {
+      console.log(`The ${this._species} makes a sound`);
     }
+  }
 
-    const cat = new Cat("Siamese");
-    const dog = new Dog("Golden Retriever");
-  </script>
+  class Cat extends Animal {
+    purr() {
+      console.log("purr");
+    }
+  }
+
+  class Dog extends Animal {
+    bark() {
+      console.log("woof");
+    }
+  }
+
+  // Expose classes globally so Cypress can access them
+  window.Animal = Animal;
+  window.Cat = Cat;
+  window.Dog = Dog;
+
+  // Optional: expose instances too
+  window.cat = new Cat("Siamese");
+  window.dog = new Dog("Golden Retriever");
+</script>
+
+
 </body>
 </html>
